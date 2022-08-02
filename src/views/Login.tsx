@@ -2,8 +2,9 @@ import React from 'react';
 import {Box, Button, ButtonGroup, Paper, styled} from "@mui/material";
 import {Cookies} from "react-cookie";
 import { useNavigate } from "react-router-dom";
+import Head from "../components/Head";
 
-const Users = ["user1", "user2"];
+const Users = ["9812478", "1873414"];
 
 const Item = styled(Paper)(({ theme }) => ({
     ...theme.typography.h2,
@@ -32,12 +33,13 @@ function Login(){
                 m: 1,
             },
         }}>
-                <Item key="Title" elevation={0}>Select a User!</Item>
-                <ButtonGroup size="large" aria-label="large user selection group" color="info">
-                    {
-                        Users.map((user) => (<Button onClick={(e) => handleUserButtonClick(e)} key={user}>{user}</Button>))
-                    }
-                </ButtonGroup>
+            <Head title="User Login" />
+            <Item key="Title" elevation={0}>Select a User!</Item>
+            <ButtonGroup size="large" aria-label="large user selection group" color="info">
+                {
+                    Users.map((user) => (<Button onClick={(e) => handleUserButtonClick(e)} key={user}>{user}</Button>))
+                }
+            </ButtonGroup>
         </Box>
     );
 }

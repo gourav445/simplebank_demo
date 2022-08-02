@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
-import Landing from "./components/Landing";
-import Login from "./components/Login";
+import Landing from "./views/Landing";
+import Login from "./views/Login";
 
 function App() {
   return (
